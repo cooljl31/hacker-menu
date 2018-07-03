@@ -26,7 +26,9 @@
     "compress": "script/compress",
     "package": "npm run build && node script/package",
     "package_sign": "npm run build && node script/package --sign",
-    "release": "npm run package_sign && npm run compress"
+    "release": "npm run package_sign && npm run compress",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "author": "Jingwen Owen Ou",
   "config": {
@@ -47,12 +49,14 @@
     "electron-window-state": "^1.0.0",
     "firebase": "^2.3.1",
     "fs-plus": "^2.8.1",
-    "lodash": "^3.10.1",
+    "lodash": "^4.17.5",
     "lru-cache": "^2.7.0",
     "menubar": "^2.2.1",
     "moment": "^2.10.6",
     "newrelic-winston": "0.0.1",
     "react": "^0.13.3",
-    "winston": "^1.0.2"
-  }
+    "winston": "^1.0.2",
+    "snyk": "^1.88.0"
+  },
+  "snyk": true
 }
